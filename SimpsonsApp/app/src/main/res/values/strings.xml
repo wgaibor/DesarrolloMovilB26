@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpsonsApp</string>
+    <string name="texto_base">Nombre Personaje</string>
+</resources>
