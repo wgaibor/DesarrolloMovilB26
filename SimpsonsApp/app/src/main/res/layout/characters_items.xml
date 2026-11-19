@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    app:cardElevation="@dimen/dimen_10dp"
+    app:cardCornerRadius="@dimen/dimen_10dp"
+    app:cardBackgroundColor="@color/whiteCream"
+    android:padding="@dimen/dimen_10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--Identificador de la imagen-->
         <ImageView
+            android:id="@+id/img_character"
             android:layout_width="@dimen/dimen_100dp"
             android:layout_height="@dimen/dimen_100dp"
             android:layout_gravity="center"
@@ -17,13 +25,61 @@
             android:contentDescription="@string/texto_base"/>
 
         <TextView
+            android:id="@+id/tv_characters"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="@dimen/dimen_18sp"
             android:textStyle="bold"
+            android:paddingTop="@dimen/dimen_10dp"
             android:textColor="@color/black_simpsons"
             android:text="@string/texto_base"/>
+
+        <TextView
+            android:id="@+id/tv_occupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/dimen_16sp"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:text="@string/ocuppation"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:background="@drawable/share_rounded_corner_with_border_gray"
+                android:text="@string/age"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:background="@drawable/share_rounded_corner_with_border_green"
+                android:text="@string/status"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_phrase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="@string/phrase"/>
+
 
     </LinearLayout>
 
